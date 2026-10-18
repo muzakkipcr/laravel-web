@@ -52,18 +52,15 @@
 <body>
 
     <div class="thankyou-container">
-        <!-- 1. Mengubah BUDI menjadi {{ $nama }} -->
         <h2>Terima Kasih, {{ $nama }}! 🎉</h2>
         <p class="lead">Pertanyaan Anda telah berhasil dikirim.</p>
 
         <blockquote>
             <strong>Pertanyaan Anda:</strong><br>
-            <!-- 2. Mengubah teks pertanyaan menjadi {{ $pertanyaan }} -->
             "{{ $pertanyaan }}"
         </blockquote>
 
         <p class="email-info mt-4">
-            <!-- 3. Mengubah budi@gmail.com menjadi {{ $email }} -->
             Pertanyaan Anda akan segera kami tanggapi dan balas melalui email <strong>{{ $email }}</strong>.<br><br>
             Mohon cek kotak masuk atau folder spam Anda secara berkala.
         </p>
