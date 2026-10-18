@@ -6,6 +6,8 @@ use App\Http\Controllers\MahasiswaController;
 
 use App\Http\Controllers\HomeController;
 
+use App\Http\Controllers\QuestionController;
+
 Route::get('/mahasiswa', function () {
     return 'Halo Mahasiswa';
 })->name('mahasiswa.show');
@@ -21,3 +23,8 @@ return view('welcome');
 });
 
 Route::get('/home', [HomeController::class, 'index']);
+
+Route::post('question/store', [QuestionController::class, 'store'])
+		->name('question.store');
+
+Route::post('/question/store', [HomeController::class, 'store'])->name('question.store');
