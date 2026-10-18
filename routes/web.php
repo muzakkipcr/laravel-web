@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MahasiswaController;
 
+use App\Http\Controllers\HomeController;
+
 Route::get('/mahasiswa', function () {
     return 'Halo Mahasiswa';
 })->name('mahasiswa.show');
@@ -17,3 +19,5 @@ Route::get('/about', function () {
 Route::get('/', function () {
 return view('welcome');
 });
+
+Route::get('/home', [HomeController::class, 'index']);
