@@ -66,4 +66,4 @@ class HomeController extends Controller
     }
 }
 
-Route::get('/home',[HomeController::class,'index']);
+

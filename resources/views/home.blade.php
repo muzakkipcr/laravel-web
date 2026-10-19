@@ -94,9 +94,24 @@
                 {{-- About --}}
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h5 class="card-title">About Our Application</h5>
-                        <p class="card-text">Our application provides a clean and intuitive interface, allowing users to navigate easily and perform tasks efficiently. Built with Laravel and Bootstrap, it offers flexibility and responsiveness.</p>
-                        <a href="#" class="btn btn-primary">Explore More</a>
+                        <h5 class="card-title">Form Pertanyaan</h5>
+                        <form action="{{ route('question.store') }}" method="POST">
+	                    @csrf
+                        <div class="mb-3">
+                    <label for="nama" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="nama" name="nama" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="pertanyaan" class="form-label">Pertanyaan</label>
+                    <textarea class="form-control" id="pertanyaan" name="pertanyaan" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Kirim Pertanyaan</button>
+            </form>
+        </div>
                     </div>
                 </div>
 
@@ -149,6 +164,49 @@
                             Gunakan <code>.card</code> untuk konten yang butuh border & sedikit efek shadow.
                         </p>
                     </div>
+                </div>
+            </div>
+
+                        <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Form Pertanyaan</h5>
+
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+<form action="{{ route('question.store') }}" method="POST">
+    @csrf
+
+    <div class="mb-3">
+        <label for="nama2" class="form-label">Nama</label>
+        <input type="text" class="form-control" id="nama2"
+            name="nama" value="{{ old('nama') }}" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="email2" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email2"
+            name="email" value="{{ old('email') }}" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="pertanyaan2" class="form-label">Pertanyaan</label>
+        <textarea class="form-control" id="pertanyaan2"
+            name="pertanyaan" rows="4" required>{{ old('pertanyaan') }}</textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Kirim Pertanyaan
+    </button>
+</form>
+
                 </div>
             </div>
 
