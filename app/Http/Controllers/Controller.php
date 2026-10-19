@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use Illuminate\Http\Request;
 
 abstract class Controller
@@ -20,4 +21,9 @@ abstract class Controller
             ]
         ]);
     }
+=======
+abstract class Controller
+{
+    //
+>>>>>>> 5c211815a167eb8adb30eac4f9061f571e00a4a8
 }

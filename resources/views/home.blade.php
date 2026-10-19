@@ -82,8 +82,13 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
+<<<<<<< HEAD
             <h1> {{ $username }} </h1>
             <p> {{ $last_login }} </p>
+=======
+            <h1 class="display-6 mb-2">{{ $username }}</h1>
+            <p class="lead mb-0">{{ $last_login }}</p>
+>>>>>>> 5c211815a167eb8adb30eac4f9061f571e00a4a8
         </div>
     </section>
 
@@ -94,6 +99,7 @@
                 {{-- About --}}
                 <div class="card mb-4">
                     <div class="card-body">
+<<<<<<< HEAD
                         <h5 class="card-title">Form Pertanyaan</h5>
                         <form action="{{ route('question.store') }}" method="POST">
 	                    @csrf
@@ -112,6 +118,11 @@
                 <button type="submit" class="btn btn-primary">Kirim Pertanyaan</button>
             </form>
         </div>
+=======
+                        <h5 class="card-title">About Our Application</h5>
+                        <p class="card-text">Our application provides a clean and intuitive interface, allowing users to navigate easily and perform tasks efficiently. Built with Laravel and Bootstrap, it offers flexibility and responsiveness.</p>
+                        <a href="#" class="btn btn-primary">Explore More</a>
+>>>>>>> 5c211815a167eb8adb30eac4f9061f571e00a4a8
                     </div>
                 </div>
 
@@ -167,6 +178,7 @@
                 </div>
             </div>
 
+<<<<<<< HEAD
                         <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Form Pertanyaan</h5>
@@ -211,6 +223,57 @@
             </div>
 
             <div class="col-md-6">
+=======
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Form Pertanyaan</h5>
+
+                        @if (session('info'))
+                            <div class="alert alert-info">
+                                {!! session('info') !!}
+                            </div>
+                        @endif
+
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
+                        @if (session('info'))
+                            <div class="alert alert-success">
+                                {{ session('info') }}
+                            </div>
+                        @endif
+
+                        <form action="{{ route('question.store') }}" method="POST">
+                            @csrf
+
+                            <div class="mb-3">
+                                <label for="nama" class="form-label">Nama</label>
+                                <input type="text" class="form-control" id="nama" name="nama" value="{{old('nama')}}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="email" name="email" value="{{old('email')}}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="pertanyaan" class="form-label">Pertanyaan</label>
+                                <textarea class="form-control" id="pertanyaan" name="pertanyaan" rows="4">{{old('pertanyaan')}}</textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Kirim Pertanyaan</button>
+                        </form>
+                    </div>
+                </div>
+>>>>>>> 5c211815a167eb8adb30eac4f9061f571e00a4a8
                 {{-- Alerts --}}
                 <div class="card ">
                     <div class="card-body">

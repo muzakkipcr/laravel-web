@@ -52,12 +52,17 @@
 <body>
 
     <div class="thankyou-container">
+<<<<<<< HEAD
         <!-- 1. Menampilkan Nama secara Dinamis -->
         <h2>Terima Kasih, {{session('nama') }}! 🎉</h2>
+=======
+        <h2>Terima Kasih, {{ $nama }}! 🎉</h2>
+>>>>>>> 5c211815a167eb8adb30eac4f9061f571e00a4a8
         <p class="lead">Pertanyaan Anda telah berhasil dikirim.</p>
 
         <blockquote>
             <strong>Pertanyaan Anda:</strong><br>
+<<<<<<< HEAD
             <!-- 2. Menampilkan Pertanyaan secara Dinamis -->
             "{{session('pertanyaan') }}"
         </blockquote>
@@ -70,6 +75,17 @@
         </p>
 
         <a href="{{ url('/') }}" class="btn btn-primary mt-4">Kembali ke Beranda</a>
+=======
+            "{{ $pertanyaan }}"
+        </blockquote>
+
+        <p class="email-info mt-4">
+            Pertanyaan Anda akan segera kami tanggapi dan balas melalui email <strong>{{ $email }}</strong>.<br><br>
+            Mohon cek kotak masuk atau folder spam Anda secara berkala.
+        </p>
+
+        <a href="{{ url('/home') }}" class="btn btn-primary mt-4">Kembali ke Beranda</a>
+>>>>>>> 5c211815a167eb8adb30eac4f9061f571e00a4a8
     </div>
 
 </body>

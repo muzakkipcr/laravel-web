@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 class QuestionController extends Controller
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5c211815a167eb8adb30eac4f9061f571e00a4a8
 {
     /**
      * Display a listing of the resource.
@@ -29,6 +32,7 @@ class QuestionController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+<<<<<<< HEAD
 		    'nama'  => 'required|max:10',
 		    'email' => ['required','email'],
 		    'pertanyaan' => 'required|max:300|min:8',
@@ -39,6 +43,22 @@ class QuestionController extends Controller
 		]);
 
 
+=======
+            'nama' => 'required | max: 10',
+            'email' => ['required', 'email'],
+            'pertanyaan' => 'required|max: 300|min:8',
+        ],[
+            'nama.required' => 'Nama tidak boleh kosong',
+            'email.email' => 'Email Tidak valid'
+        ]);
+
+        $data['nama']       = $request->nama;
+        $data['email']      = $request->email;
+        $data['pertanyaan'] = $request->pertanyaan;
+
+        return view('home-question-respon', $data);
+        return redirect()->route('home')->with('info', 'Pertanyaan anda berhasil dikirim!');
+>>>>>>> 5c211815a167eb8adb30eac4f9061f571e00a4a8
     }
 
     /**

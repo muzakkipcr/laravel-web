@@ -35,7 +35,15 @@ class MahasiswaController extends Controller
      */
     public function show(string $param1)
     {
+<<<<<<< HEAD
         return "Data mahasiswa: ".$param1;
+=======
+        if($param1 == 'detail'){
+            return view('halaman-mahasiswa-detail');
+        }else if($param1 == 'profil'){
+            return view('halaman-mahasiswa-profil');
+        }
+>>>>>>> 5c211815a167eb8adb30eac4f9061f571e00a4a8
     }
 
     /**

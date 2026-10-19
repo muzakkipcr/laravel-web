@@ -27,6 +27,10 @@
 	<meta name="author" content="Themesberg">
 
 	<!-- Favicon -->
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="{{ asset('assets/css/volt.css') }}">
+>>>>>>> 5c211815a167eb8adb30eac4f9061f571e00a4a8
 	<link rel="apple-touch-icon" sizes="120x120" href="../../assets/img/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon/favicon-16x16.png">
@@ -36,15 +40,24 @@
 	<meta name="theme-color" content="#ffffff">
 
 	<!-- Volt CSS -->
+<<<<<<< HEAD
 	<link type="text/css" href="{{ asset('assets-admin/css/volt.css')}}" rel="stylesheet">
+=======
+	<link type="text/css" href="../../css/volt.css" rel="stylesheet">
+>>>>>>> 5c211815a167eb8adb30eac4f9061f571e00a4a8
 
 </head>
 
 <body>
 	<nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
 		<a class="navbar-brand me-lg-5" href="../../index.html">
+<<<<<<< HEAD
 			<img class="navbar-brand-dark" src="{{ asset('assets-admin/img/brand/light.svg') }}" alt="Volt logo" />
 			<img class="navbar-brand-light" src="{{ asset('assets-admin/img/brand/dark.svg') }}" alt="Volt logo" />
+=======
+			<img class="navbar-brand-dark" src="../../assets/img/brand/light.svg" alt="Volt logo" />
+			<img class="navbar-brand-light" src="../../assets/img/brand/dark.svg" alt="Volt logo" />
+>>>>>>> 5c211815a167eb8adb30eac4f9061f571e00a4a8
 		</a>
 		<div class="d-flex align-items-center">
 			<button class="navbar-toggler d-lg-none collapsed" type="button" data-bs-toggle="collapse"
@@ -101,6 +114,7 @@
                         <span class="sidebar-text">Dashboard</span>
                     </a>
                 </li>
+<<<<<<< HEAD
                 <li class="nav-item  active ">
                     <a href="{{route('pelanggan.create')}}" class="nav-link">
                         <span class="sidebar-icon">
@@ -111,6 +125,8 @@
                         <span class="sidebar-text">Pelanggan</span>
                     </a>
                 </li>
+=======
+>>>>>>> 5c211815a167eb8adb30eac4f9061f571e00a4a8
                 <li class="nav-item">
                     <span class="nav-link  collapsed  d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#submenu-app">
                         <span>
