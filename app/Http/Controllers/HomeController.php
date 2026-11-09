@@ -11,12 +11,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-        $data ['username']        = 'Heroku';
-        $data ['last_login']      = date('Y-m-d H:i:s');
-        $data ['list_pendidikan'] = ['SD','SMP','SMA','S1','S2','S3'];
-        return view('home', $data );
-=======
         /* Cara 1 */
     $data ['username']        = 'Heroku';
     $data ['last_login']      = date('Y-m-d H:i:s');
@@ -35,10 +29,9 @@ class HomeController extends Controller
 	  $username        = 'Heroku';
 		$last_login      = date('Y-m-d H:i:s');
 		$list_pendidikan = ['SD', 'SMP', 'SMA', 'S1', 'S2', 'S3'];
-        
+
     return view('home', compact('username', 'last_login', 'list_pendidikan'));
 
->>>>>>> 5c211815a167eb8adb30eac4f9061f571e00a4a8
     }
 
     /**
@@ -54,9 +47,6 @@ class HomeController extends Controller
      */
     public function store(Request $request)
     {
-<<<<<<< HEAD
-        //
-=======
         // Redirect ke route yang memiliki alias 'home'
         return redirect()->route('home');
 
@@ -65,7 +55,6 @@ class HomeController extends Controller
 
         // Redirect ke URL eksternal
         return redirect()->away('https://www.example.com');
->>>>>>> 5c211815a167eb8adb30eac4f9061f571e00a4a8
     }
 
     /**
@@ -100,8 +89,3 @@ class HomeController extends Controller
         //
     }
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 5c211815a167eb8adb30eac4f9061f571e00a4a8
